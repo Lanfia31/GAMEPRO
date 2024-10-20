@@ -2,6 +2,21 @@ import random
 
 choices = ['pierre', 'feuille', 'ciseau']
 
+
+
+# Fonctionnalité 2: Choisir le nombre de manches
+def nombre_parties():
+    while True:
+        try:
+            num_parties = int(input("Combien de manches voulez-vous jouer ? "))
+            if num_parties > 0:
+                return num_parties
+            else:
+                print("Veuillez entrer un nombre positif.")
+        except ValueError:
+            print("Entrée invalide. Veuillez entrer un nombre.")
+
+
 def get_computer_choice():
     return random.choice(choices)
 
@@ -51,3 +66,5 @@ while True:
     if replay != "yes":
         print("Bayi :-( ")
         break
+
+
